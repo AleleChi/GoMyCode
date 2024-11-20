@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Agency Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .navbar {
+      background-color: #007bff;
+    }
+    .navbar-brand, .nav-link {
+      color: white !important;
+    }
+    .hero {
+      position: relative;
+      background: url('./res/tourist-walking-into-village-rearview.jpg') no-repeat center center / cover;
+      height: 600px;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero-content {
+      z-index: 2;
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Travel Agency</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tours">Tours</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1 class="display-4 fw-bold">Explore the World with Us</h1>
+    <p class="lead">Discover your next adventure at unbeatable prices.</p>
+    <a href="#destinations" class="btn btn-primary btn-lg">Start Exploring</a>
+  </div>
+</section>
+
+
+<section id="destinations" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Top Destinations</h2>
+    <div class="row g-4">
+     
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./res/woman-riding-bike-talking-smartphone-city-france.jpg" class="card-img-top" alt="Paris">
+          <div class="card-body">
+            <h5 class="card-title">Paris, France</h5>
+            <p class="card-text">The city of lights awaits with its romantic vibes and iconic landmarks.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./res/blue-villa-beautiful-sea-hotel.jpg" class="card-img-top" alt="Maldives">
+          <div class="card-body">
+            <h5 class="card-title">Maldives</h5>
+            <p class="card-text">Relax in paradise with crystal-clear waters and stunning beaches.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./res/asian-city-urban-landscape.jpg" class="card-img-top" alt="Tokyo">
+          <div class="card-body">
+            <h5 class="card-title">Tokyo, Japan</h5>
+            <p class="card-text">Experience the perfect blend of tradition and modernity in Tokyo.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="tours" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Tour Packages</h2>
+    <div class="accordion" id="tourAccordion">
+    
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            European Explorer
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#tourAccordion">
+          <div class="accordion-body">
+            Explore the best of Europe in a 10-day guided tour. Visit Paris, Rome, and Barcelona!
+          </div>
+        </div>
+      </div>
+     
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Tropical Getaway
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#tourAccordion">
+          <div class="accordion-body">
+            Unwind in the Maldives and enjoy 7 days of luxury in crystal-clear waters.
+          </div>
+        </div>
+      </div>
+  
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            Asian Adventure
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#tourAccordion">
+          <div class="accordion-body">
+            Discover the wonders of Asia with stops in Tokyo, Bangkok, and Bali.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Your Name">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Your Email">
+      </div>
+      <div class="mb-3">
+        <label for="destination" class="form-label">Destination of Interest</label>
+        <input type="text" class="form-control" id="destination" placeholder="Destination">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <p>© 2024 Travel Agency. Follow us on 
+    <a href="#">Facebook</a>, 
+    <a href="#">Twitter</a>, 
+    <a href="#">Instagram</a>.
+  </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
