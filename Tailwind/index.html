@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Working With Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+   
+    <nav class="bg-black text-white py-8 px-8 sticky top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center px-4">
+        <div class="text-xl font-bold">Band</div>
+        <ul class="flex space-x-6">
+          <li><a href="#home" class="hover:text-clifford">Home</a></li>
+          <li><a href="#band" class="hover:text-clifford">Band</a></li>
+          <li><a href="#tour" class="hover:text-clifford">Tour</a></li>
+          <li><a href="#contact" class="hover:text-clifford">Contact</a></li>
+          <li><a href="#more" class="hover:text-clifford">More</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="home" class="bg-black h-64">
+      <div class="container mx-auto h-full flex justify-center items-center space-x-4">
+        
+        <img src="./res/image1.png" alt="Band Image 1" class="h-48 w-48 object-cover rounded-lg" />
+        
+       
+        <img src="./res/image1.png" alt="Band Image 2" class="h-48 w-48 object-cover rounded-lg" />
+        
+       
+        <img src="./res/image1.png" alt="Band Image 3" class="h-48 w-48 object-cover rounded-lg" />
+      </div>
+    </section>
+    
+
+    <section id="band" class="text-center my-16">
+      <h2 class="text-3xl font-bold mb-4">The Band</h2>
+      <p class="text-xl italic mb-4">We love music</p>
+      <p class="max-w-2xl mx-auto text-gray-700 mb-8">
+        We have created a fictional band website. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua...
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex flex-col items-center">
+          <img
+            src="./res/Maher.svg"
+            alt="Maher Damak"
+            class="w-24 h-24 rounded-full mb-4"
+          />
+          <p class="font-bold">Member Academic Board</p>
+          <p class="text-gray-600">Maher Damak</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img
+            src="./res/olubayo.svg"
+            alt="Band Member 2"
+            class="w-24 h-24 rounded-full mb-4"
+          />
+          <p class="font-bold">Member Academic Board</p>
+          <p class="text-gray-600">Olubayo Adekambi</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img
+            src="./res/sameh.svg"
+            alt="Band Member 3"
+            class="w-24 h-24 rounded-full mb-4"
+          />
+          <p class="font-bold">Member Academic Board</p>
+          <p class="text-gray-600">Sameh Ben</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tour" class="bg-black text-white py-16">
+      <h2 class="text-3xl font-bold text-center mb-2">Tour Dates</h2>
+      <p class="text-center mb-8">Remember to book your tickets!</p>
+
+      <
+      <div class="max-w-lg mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+        <div class="text-center">
+          <p class="font-bold">September</p>
+          <span class="text-red-500 font-semibold">Sold out</span>
+        </div>
+        <div class="text-center">
+          <p class="font-bold">October</p>
+          <span class="text-red-500 font-semibold">Sold out</span>
+        </div>
+        <div class="text-center">
+          <p class="font-bold">November</p>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center max-w-5xl mx-auto"
+      >
+        <div class="bg-white text-black p-6 rounded-lg shadow-lg">
+          <img
+            src="new-york.jpg"
+            alt="New York"
+            class="w-full h-32 object-cover rounded-lg mb-4"
+          />
+          <p class="font-bold text-lg">New York</p>
+          <p class="text-sm text-gray-600">Fri 27 Nov 2016</p>
+          <p class="text-gray-700 my-4">
+            Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+          </p>
+          <button class="bg-clifford text-white py-2 px-4 rounded">
+            Buy Tickets
+          </button>
+        </div>
+        <div class="bg-white text-black p-6 rounded-lg shadow-lg">
+          <img
+            src="paris.jpg"
+            alt="Paris"
+            class="w-full h-32 object-cover rounded-lg mb-4"
+          />
+          <p class="font-bold text-lg">Paris</p>
+          <p class="text-sm text-gray-600">Sat 28 Nov 2016</p>
+          <p class="text-gray-700 my-4">
+            Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+          </p>
+          <button class="bg-clifford text-white py-2 px-4 rounded">
+            Buy Tickets
+          </button>
+        </div>
+        <div class="bg-white text-black p-6 rounded-lg shadow-lg">
+          <img
+            src="san-francisco.jpg"
+            alt="San Francisco"
+            class="w-full h-32 object-cover rounded-lg mb-4"
+          />
+          <p class="font-bold text-lg">San Francisco</p>
+          <p class="text-sm text-gray-600">Sun 29 Nov 2016</p>
+          <p class="text-gray-700 my-4">
+            Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+          </p>
+          <button class="bg-clifford text-white py-2 px-4 rounded">
+            Buy Tickets
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-gray-100">
+      <h2 class="text-3xl font-bold text-center mb-4">Contact</h2>
+      <p class="text-center text-gray-600 mb-8">Fan? Drop a note!</p>
+
+      <div class="text-center mb-8">
+        <p> Chicago, US</p>
+        <p> Phone: +00 151515</p>
+        <p> Email: mail@mail.com</p>
+      </div>
+
+      <form class="max-w-md mx-auto space-y-4">
+        <input
+          type="text"
+          placeholder="Name"
+          class="w-full border border-gray-300 p-2 rounded"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          class="w-full border border-gray-300 p-2 rounded"
+        />
+        <textarea
+          placeholder="Message"
+          class="w-full border border-gray-300 p-2 rounded"
+        ></textarea>
+        <button
+          type="submit"
+          class="bg-black text-white py-2 px-4 rounded w-full"
+        >
+          Send
+        </button>
+      </form>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto text-center space-y-4">
+        <div class="flex justify-center space-x-4">
+          <a href="#" class="hover:text-clifford">Facebook</a>
+          <a href="#" class="hover:text-clifford">Instagram</a>
+          <a href="#" class="hover:text-clifford">Pinterest</a>
+          <a href="#" class="hover:text-clifford">YouTube</a>
+          <a href="#" class="hover:text-clifford">LinkedIn</a>
+        </div>
+        <p>Powered by w3.css</p>
+      </div>
+    </footer>
+  </body>
+</html>

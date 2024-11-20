@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clothing Store</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div class="flex">
+    <div class="sticky top-0 left-0 h-full w-1/4 bg-white shadow-lg p-8">
+      <h1 class="text-3xl font-bold mb-8">LOGO</h1>
+      <nav class="space-y-4">
+        <a href="#" class="text-gray-700 font-semibold block">Shirts</a>
+        <a href="#" class="text-gray-700 font-semibold block">Dresses</a>
+        <div class="text-gray-700 font-semibold">
+          Jeans
+          <ul class="ml-4 mt-2 space-y-2 text-gray-600">
+            <li><a href="#" class="block">Skinny</a></li>
+            <li><a href="#" class="block">Relaxed</a></li>
+            <li><a href="#" class="block">Bootcut</a></li>
+            <li><a href="#" class="block">Straight</a></li>
+          </ul>
+        </div>
+        <a href="#" class="text-gray-700 font-semibold block">Jackets</a>
+        <a href="#" class="text-gray-700 font-semibold block">Gymwear</a>
+        <a href="#" class="text-gray-700 font-semibold block">Blazers</a>
+        <a href="#" class="text-gray-700 font-semibold block">Shoes</a>
+      </nav>
+      <div class="mt-8 space-y-4 text-gray-700">
+        <a href="#" class="block">Contact</a>
+        <a href="#" class="block">Newsletter</a>
+        <a href="#" class="block">Subscribe</a>
+      </div>
+    </div>
+
+    <main class="p-8">
+      <header class="flex items-center justify-between mb-8">
+        <h2 class="text-2xl font-bold">Jeans</h2>
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-gray-700 hover:text-gray-900">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 3h18M4 8h16M5 13h14M6 18h12"
+              />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-700 hover:text-gray-900">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <section
+        class="relative h-80 bg-cover bg-center mb-8"
+        style="
+          background-image: url('https://www.w3schools.com/w3images/jeans.jpg');
+        "
+      >
+        <div
+          class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-center text-white"
+        >
+          <div>
+            <h2 class="text-4xl font-bold mb-2">New arrivals</h2>
+            <p class="text-lg mb-4">COLLECTION 2022</p>
+            <a href="#" class="bg-white text-black px-4 py-2 rounded"
+              >SHOP NOW</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8"
+      >
+        <div class="bg-white p-4 shadow-lg rounded-lg text-center">
+          <img
+            src="https://www.w3schools.com/w3images/jeans1.jpg"
+            alt="Ripped Skinny Jeans"
+            class="w-full h-48 object-cover mb-4 rounded"
+          />
+          <h3 class="text-lg font-semibold">Ripped Skinny Jeans</h3>
+          <p class="text-gray-700">$24.99</p>
+        </div>
+
+        <div class="bg-white p-4 shadow-lg rounded-lg text-center">
+          <img
+            src="https://www.w3schools.com/w3images/jeans2.jpg"
+            alt="Mega Ripped Jeans"
+            class="w-full h-48 object-cover mb-4 rounded"
+          />
+          <h3 class="text-lg font-semibold">Mega Ripped Jeans</h3>
+          <p class="text-gray-700">$19.99</p>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg text-center">
+          <img
+            src="https://www.w3schools.com/w3images/jeans3.jpg"
+            alt="Washed Skinny Jeans"
+            class="w-full h-48 object-cover mb-4 rounded"
+          />
+          <h3 class="text-lg font-semibold">Washed Skinny Jeans</h3>
+          <p class="text-gray-700">$20.50</p>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg text-center">
+          <img
+            src="https://www.w3schools.com/w3images/jeans4.jpg"
+            alt="Vintage Skinny Jeans"
+            class="w-full h-48 object-cover mb-4 rounded"
+          />
+          <h3 class="text-lg font-semibold">Vintage Skinny Jeans</h3>
+          <p class="text-gray-700">$14.99</p>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg text-center">
+            <img
+              src="https://www.w3schools.com/w3images/jeans4.jpg"
+              alt="Vintage Skinny Jeans"
+              class="w-full h-48 object-cover mb-4 rounded"
+            />
+            <h3 class="text-lg font-semibold">Vintage Skinny Jeans</h3>
+            <p class="text-gray-700">$14.99</p>
+          </div>
+          <div class="bg-white p-4 shadow-lg rounded-lg text-center">
+            <img
+              src="https://www.w3schools.com/w3images/jeans4.jpg"
+              alt="Vintage Skinny Jeans"
+              class="w-full h-48 object-cover mb-4 rounded"
+            />
+            <h3 class="text-lg font-semibold">Vintage Skinny Jeans</h3>
+            <p class="text-gray-700">$14.99</p>
+          </div>
+          <div class="bg-white p-4 shadow-lg rounded-lg text-center">
+            <img
+              src="https://www.w3schools.com/w3images/jeans4.jpg"
+              alt="Vintage Skinny Jeans"
+              class="w-full h-48 object-cover mb-4 rounded"
+            />
+            <h3 class="text-lg font-semibold">Vintage Skinny Jeans</h3>
+            <p class="text-gray-700">$14.99</p>
+          </div>
+          <div class="bg-white p-4 shadow-lg rounded-lg text-center">
+            <img
+              src="https://www.w3schools.com/w3images/jeans4.jpg"
+              alt="Vintage Skinny Jeans"
+              class="w-full h-48 object-cover mb-4 rounded"
+            />
+            <h3 class="text-lg font-semibold">Vintage Skinny Jeans</h3>
+            <p class="text-gray-700">$14.99</p>
+          </div>
+      </section>
+
+      <section class="bg-gray-200 p-8 rounded-lg mb-8">
+        <h2 class="text-xl font-bold mb-4">About Us</h2>
+        <p class="text-gray-700">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+          imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae
+          scelerisque enim ligula venenatis dolor.
+        </p>
+        <p class="text-gray-700 mt-2">
+          Mauris id fermentum nulla. Integer id dolor volutpat, tristique risus
+          in, scelerisque nunc. Cras auctor tempor augue.
+        </p>
+      </section>
+
+      <section class="bg-black text-white py-8 text-center rounded-lg mb-8">
+        <h2 class="text-2xl font-semibold mb-2">Subscribe</h2>
+        <p class="mb-4">To get special offers and VIP treatment:</p>
+        <form class="flex justify-center items-center space-x-2">
+          <input
+            type="email"
+            placeholder="Enter e-mail"
+            class="px-4 py-2 rounded-l bg-gray-700 text-white focus:outline-none"
+          />
+          <button
+            type="submit"
+            class="px-4 py-2 bg-red-500 text-white rounded-r"
+          >
+            Subscribe
+          </button>
+        </form>
+      </section>
+
+      <footer class="bg-black text-white py-8">
+        <div
+          class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 text-center md:text-left"
+        >
+          <div>
+            <h3 class="font-semibold mb-2">Contact</h3>
+            <p class="text-sm text-gray-400 mb-4">Questions? Go ahead.</p>
+            <form class="space-y-2">
+              <input
+                type="text"
+                placeholder="Name"
+                class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none text-white"
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none text-white"
+              />
+              <input
+                type="text"
+                placeholder="Subject"
+                class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none text-white"
+              />
+              <textarea
+                placeholder="Message"
+                class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none text-white"
+              ></textarea>
+              <button
+                class="w-full px-4 py-2 bg-gray-900 text-white rounded font-semibold"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+
+          <div>
+            <h3 class="font-semibold mb-2">About</h3>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li><a href="#" class="hover:underline">About us</a></li>
+              <li><a href="#" class="hover:underline">We’re hiring</a></li>
+              <li><a href="#" class="hover:underline">Support</a></li>
+              <li><a href="#" class="hover:underline">Find store</a></li>
+              <li><a href="#" class="hover:underline">Shipment</a></li>
+              <li><a href="#" class="hover:underline">Payment</a></li>
+              <li><a href="#" class="hover:underline">Gift card</a></li>
+              <li><a href="#" class="hover:underline">Return</a></li>
+              <li><a href="#" class="hover:underline">Help</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-semibold mb-2">Store</h3>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>
+                <p>
+                  <span class="inline-block align-middle">&#x1F4CD;</span>
+                  Company Name
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span class="inline-block align-middle">&#x260E;</span> 0044
+                  32123
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span class="inline-block align-middle">&#x2709;</span>
+                  ex@mail.com
+                </p>
+              </li>
+            </ul>
+            <p class="font-semibold mt-4 mb-2 text-gray-400">We accept:</p>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>Amex</li>
+              <li>Credit Card</li>
+            </ul>
+            <div class="flex justify-center md:justify-start space-x-4 mt-4">
+              <a href="#" class="text-gray-400 hover:text-white">&#xf09a;</a>
+              <a href="#" class="text-gray-400 hover:text-white">&#xf16d;</a>
+              <a href="#" class="text-gray-400 hover:text-white">&#xf0e1;</a>
+              <a href="#" class="text-gray-400 hover:text-white">&#xf099;</a>
+              <a href="#" class="text-gray-400 hover:text-white">&#xf0e1;</a>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-8 text-sm text-gray-500">
+          <p>Powered by <a href="#" class="hover:underline">w3.css</a></p>
+        </div>
+      </footer>
+    </main>
+</div>
+  </body>
+</html>
