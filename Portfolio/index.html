@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alele Chigozie Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+ 
+  <header class="bg-gray-900 text-white p-4 fixed top-0 w-full shadow-lg z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Chigozie</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#home" class="hover:text-blue-400">Home</a></li>
+          <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
+          <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="bg-gray-100 flex items-center justify-center w-full h-screen">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
+ 
+      <div class="md:w-1/2">
+        <h1 class="text-5xl font-bold text-gray-800">Alele Chigozie</h1>
+        <p class="text-blue-600 text-2xl italic mt-4">Portfolio</p>
+        <p class="text-gray-600 mt-6 text-lg leading-relaxed">
+          Passionate Software Engineer, studying at GoMyCode SE Program. I build solutions with creativity, precision, and a focus on user-centric design.
+        </p>
+      </div>
+  
+      <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
+        <img src="./res/profile-image.jpeg" alt="Alele Chigozie" class="w-80 h-80 rounded-full border-4 border-blue-500 object-cover">
+      </div>
+    </div>
+  </section>
+
+  
+
+
+  <section id="skills" class="bg-gray-100 py-16">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-semibold text-center mb-8">My Skills</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+          <h4 class="text-xl font-bold mb-4">HTML & CSS</h4>
+          <p class="text-gray-600">Proficient in creating modern web designs using semantic HTML and CSS frameworks.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+          <h4 class="text-xl font-bold mb-4">JavaScript</h4>
+          <p class="text-gray-600">Skilled in building interactive user interfaces with modern JavaScript.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+          <h4 class="text-xl font-bold mb-4">Tailwind CSS</h4>
+          <p class="text-gray-600">Experienced in building responsive layouts with Tailwind CSS.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+          <h4 class="text-xl font-bold mb-4">React</h4>
+          <p class="text-gray-600">Specialized in building dynamic and scalable web applications using React.js.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="bg-gray-900 py-16 text-white">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-semibold text-center mb-8">My Projects</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+          <img src="./res/restu.png" alt="Project 1" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h4 class="text-xl font-bold">Resturant</h4>
+            <p class="text-gray-400 mt-2">Delicious meals served with care and amazing ambiance.</p>
+          </div>
+        </div>
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+          <img src="./res/travel.png" alt="Project 2" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h4 class="text-xl font-bold">Travel</h4>
+            <p class="text-gray-400 mt-2">Exploring new places, creating unforgettable lifetime memories.</p>
+          </div>
+        </div>
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+          <img src="./res/store.png" alt="Project 3" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h4 class="text-xl font-bold">Store</h4>
+            <p class="text-gray-400 mt-2">Convenient shopping for everything you need, anytime</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="contact" class="bg-white py-16">
+    <div class="container mx-auto">
+      <h3 class="text-3xl font-semibold text-center mb-8">Contact Me</h3>
+      <form class="max-w-lg mx-auto space-y-6">
+        <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600" />
+        <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600" />
+        <textarea placeholder="Your Message" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600"></textarea>
+        <button class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-500">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+
+  <footer class="bg-gray-800 text-gray-400 py-6">
+    <div class="container mx-auto text-center">
+      <div class="flex justify-center space-x-6 mb-4">
+        <a href="#" class="hover:text-white">LinkedIn</a>
+        <a href="#" class="hover:text-white">GitHub</a>
+        <a href="#" class="hover:text-white">Twitter</a>
+      </div>
+      <p>&copy; 2024 Alele Chigozie. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
