@@ -207,3 +207,8 @@
 
 // console.log(countTrue([true, false, false, true, false]));
 
+function reverseString(str){
+    let splitString = str.split("")
+    let reverseArray = splitString.reverse()
+    console.log(reverseArray)
+}

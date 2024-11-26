@@ -7,110 +7,164 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-gray-100 text-gray-800">
- 
     <header class="bg-gray-900 text-white py-4">
-      <div class="container mx-auto flex flex-wrap justify-between items-center px-4">
+      <div
+        class="container mx-auto flex flex-wrap justify-between items-center px-4"
+      >
         <h1 class="text-3xl font-bold">My Awesome Blog</h1>
         <nav class="mt-4 md:mt-0">
           <ul class="flex flex-wrap space-x-4 md:space-x-6">
             <li><a href="#home" class="hover:text-blue-400">Home</a></li>
-            <li><a href="#categories" class="hover:text-blue-400">Categories</a></li>
-            <li><a href="#recent" class="hover:text-blue-400">Recent Posts</a></li>
+            <li>
+              <a href="#categories" class="hover:text-blue-400">Categories</a>
+            </li>
+            <li>
+              <a href="#recent" class="hover:text-blue-400">Recent Posts</a>
+            </li>
             <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    
     <section id="featured" class="py-12 bg-white">
       <div class="container mx-auto px-4">
         <h2 class="text-4xl font-bold text-center mb-8">Featured Posts</h2>
         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-       
           <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden">
-            <img src="./res/nig-ind.jpg" alt="Nigeria and India Strengthen Maritime Security Ties" class="w-full h-48 object-cover">
+            <img
+              src="./res/nig-ind.jpg"
+              alt="Nigeria and India Strengthen Maritime Security Ties"
+              class="w-full h-48 object-cover"
+            />
             <div class="p-6">
-              <h3 class="text-2xl font-semibold">Nigeria and India Strengthen Maritime Security Ties</h3>
+              <h3 class="text-2xl font-semibold">
+                Nigeria and India Strengthen Maritime Security Ties
+              </h3>
               <p class="text-gray-600 mt-2">
-                On November 17, 2024, Nigerian President Bola Tinubu and Indian Prime Minister Narendra Modi agreed to enhance cooperation in maritime security.
+                On November 17, 2024, Nigerian President Bola Tinubu and Indian
+                Prime Minister Narendra Modi agreed to enhance cooperation in
+                maritime security.
               </p>
             </div>
           </div>
-         
+
           <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden">
-            <img src="./res/grid.jpeg" alt="Nigeria's National Grid Collapses Again" class="w-full h-48 object-cover">
+            <img
+              src="./res/grid.jpeg"
+              alt="Nigeria's National Grid Collapses Again"
+              class="w-full h-48 object-cover"
+            />
             <div class="p-6">
-              <h3 class="text-2xl font-semibold">Nigeria's National Grid Collapses Again</h3>
+              <h3 class="text-2xl font-semibold">
+                Nigeria's National Grid Collapses Again
+              </h3>
               <p class="text-gray-600 mt-2">
-                On November 12, 2024, Nigeria experienced another national grid collapse, plunging the country into darkness.
+                On November 12, 2024, Nigeria experienced another national grid
+                collapse, plunging the country into darkness.
               </p>
             </div>
           </div>
-         
+
           <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden">
-            <img src="./res/nnpc.jpg" alt="Nigeria Promotes New Crude Oil Grade to Europe" class="w-full h-48 object-cover">
+            <img
+              src="./res/nnpc.jpg"
+              alt="Nigeria Promotes New Crude Oil Grade to Europe"
+              class="w-full h-48 object-cover"
+            />
             <div class="p-6">
-              <h3 class="text-2xl font-semibold">Nigeria Promotes New Crude Oil Grade to Europe</h3>
+              <h3 class="text-2xl font-semibold">
+                Nigeria Promotes New Crude Oil Grade to Europe
+              </h3>
               <p class="text-gray-600 mt-2">
-                On November 22, 2024, Nigeria's national oil company sought offtakers for the new Utapate crude oil blend, targeting European markets.
+                On November 22, 2024, Nigeria's national oil company sought
+                offtakers for the new Utapate crude oil blend, targeting
+                European markets.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
 
     <section id="categories" class="py-12 bg-gray-200">
       <div class="container mx-auto px-4">
         <h2 class="text-4xl font-bold text-center mb-8">Categories</h2>
         <div class="flex flex-wrap justify-center gap-4">
-          <span class="bg-blue-500 text-white px-4 py-2 rounded-full text-lg">Tech</span>
-          <span class="bg-green-500 text-white px-4 py-2 rounded-full text-lg">Lifestyle</span>
-          <span class="bg-purple-500 text-white px-4 py-2 rounded-full text-lg">Travel</span>
-          <span class="bg-red-500 text-white px-4 py-2 rounded-full text-lg">Food</span>
-          <span class="bg-yellow-500 text-white px-4 py-2 rounded-full text-lg">Finance</span>
+          <span class="bg-blue-500 text-white px-4 py-2 rounded-full text-lg"
+            >Tech</span
+          >
+          <span class="bg-green-500 text-white px-4 py-2 rounded-full text-lg"
+            >Lifestyle</span
+          >
+          <span class="bg-purple-500 text-white px-4 py-2 rounded-full text-lg"
+            >Travel</span
+          >
+          <span class="bg-red-500 text-white px-4 py-2 rounded-full text-lg"
+            >Food</span
+          >
+          <span class="bg-yellow-500 text-white px-4 py-2 rounded-full text-lg"
+            >Finance</span
+          >
         </div>
       </div>
     </section>
-
 
     <section id="recent-posts" class="py-12 bg-white">
       <div class="container mx-auto px-4">
         <h2 class="text-4xl font-bold text-center mb-8">Recent Posts</h2>
         <div class="grid gap-6">
-        
-          <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b pb-6">
-            <h3 class="text-xl font-semibold text-gray-800">Nigeria Commences Delayed Mpox Vaccination Program</h3>
+          <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-center border-b pb-6"
+          >
+            <h3 class="text-xl font-semibold text-gray-800">
+              Nigeria Commences Delayed Mpox Vaccination Program
+            </h3>
             <span class="text-gray-500 mt-2 md:mt-0">November 18, 2024</span>
           </div>
-         
-          <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b pb-6">
-            <h3 class="text-xl font-semibold text-gray-800">Nigeria's Inflation Rises for Second Month</h3>
+
+          <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-center border-b pb-6"
+          >
+            <h3 class="text-xl font-semibold text-gray-800">
+              Nigeria's Inflation Rises for Second Month
+            </h3>
             <span class="text-gray-500 mt-2 md:mt-0">November 15, 2024</span>
           </div>
-         
-          <div class="flex flex-col md:flex-row justify-between items-start md:items-center border-b pb-6">
-            <h3 class="text-xl font-semibold text-gray-800">Nigeria Signs $1.2 Billion Deal with Chinese Firm</h3>
+
+          <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-center border-b pb-6"
+          >
+            <h3 class="text-xl font-semibold text-gray-800">
+              Nigeria Signs $1.2 Billion Deal with Chinese Firm
+            </h3>
             <span class="text-gray-500 mt-2 md:mt-0">November 14, 2024</span>
           </div>
         </div>
       </div>
     </section>
 
-  
     <section id="newsletter" class="py-12 bg-gray-200">
       <div class="container mx-auto text-center px-4">
         <h2 class="text-4xl font-bold mb-6">Subscribe to Our Newsletter</h2>
-        <form class="max-w-md mx-auto flex flex-col sm:flex-row items-center gap-4">
-          <input type="email" placeholder="Enter your email" class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500" />
-          <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600">Subscribe</button>
+        <form
+          class="max-w-md mx-auto flex flex-col sm:flex-row items-center gap-4"
+        >
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            type="submit"
+            class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600"
+          >
+            Subscribe
+          </button>
         </form>
       </div>
     </section>
 
-    
     <footer class="bg-gray-900 text-gray-400 py-6">
       <div class="container mx-auto text-center px-4">
         <div class="flex justify-center space-x-6 mb-4">
