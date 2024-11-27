@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 h-screen flex justify-center items-center"
+  >
+    <div class="bg-white shadow-lg rounded-lg p-6 w-96">
+      <h1 class="text-2xl font-bold text-center mb-6">
+        Quiz: Test Your Knowledge
+      </h1>
+      <form id="quiz-form" class="space-y-4">
+        <div class="question">
+          <p class="font-semibold">
+            1. Which planet is known as the Red Planet?
+          </p>
+          <label class="block">
+            <input type="radio" name="q1" value="Earth" class="mr-2" />
+            Earth
+          </label>
+          <label class="block">
+            <input type="radio" name="q1" value="Mars" class="mr-2" />
+            Mars
+          </label>
+          <label class="block">
+            <input type="radio" name="q1" value="Venus" class="mr-2" />
+            Venus
+          </label>
+        </div>
+
+        <div class="question">
+          <p class="font-semibold">2. What is the capital of Japan?</p>
+          <label class="block">
+            <input type="radio" name="q2" value="Tokyo" class="mr-2" />
+            Tokyo
+          </label>
+          <label class="block">
+            <input type="radio" name="q2" value="Beijing" class="mr-2" />
+            Beijing
+          </label>
+          <label class="block">
+            <input type="radio" name="q2" value="Seoul" class="mr-2" />
+            Seoul
+          </label>
+        </div>
+
+        <button
+          type="button"
+          id="submit-btn"
+          class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 w-full"
+        >
+          Submit Quiz
+        </button>
+      </form>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
