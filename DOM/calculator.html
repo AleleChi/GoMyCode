@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+       
+        body {
+            background-color: #f3f4f6;
+        }
+
+        .calculator {
+            @apply bg-white rounded-2xl shadow-xl p-6 w-80;
+        }
+
+        #display {
+            @apply bg-gray-200 text-right text-4xl px-4 py-6 mb-6 rounded-lg border-2 border-gray-300;
+        }
+
+       
+        .btn {
+            @apply text-white rounded-xl px-6 py-4 text-2xl transition duration-150 ease-in-out;
+        }
+
+     
+        .btn.number {
+            @apply bg-gray-300 border-2 border-gray-400 hover:bg-gray-400 active:bg-gray-500;
+        }
+
+       
+        .btn.operator {
+            @apply bg-orange-500 border-2 border-orange-600 hover:bg-orange-600 active:bg-orange-700;
+        }
+
+     
+        .btn.clear {
+            @apply bg-red-500 border-2 border-red-600 hover:bg-red-600 active:bg-red-700;
+        }
+
+        
+        .btn.equal {
+            @apply bg-blue-500 border-2 border-blue-600 hover:bg-blue-600 active:bg-blue-700;
+        }
+
+      
+        .grid {
+            @apply grid grid-cols-4 gap-6;
+        }
+
+        
+        .span-two {
+            @apply col-span-2;
+        }
+
+        
+        .btn:hover {
+            @apply shadow-lg;
+        }
+
+        .btn:active {
+            @apply scale-95;
+        }
+    </style>
+</head>
+<body class="flex justify-center items-center min-h-screen">
+
+    <div class="calculator">
+        <div id="display" class="mb-6 bg-gray-200 text-right text-4xl p-6 rounded-lg border-2 border-gray-300">0</div>
+
+        <div class="grid grid-cols-4 gap-6">
+         
+            <button class="btn clear text-xl" data-value="C">C</button>
+
+            <!-- Numbers and Operators -->
+            <button class="btn number" data-value="7">7</button>
+            <button class="btn number" data-value="8">8</button>
+            <button class="btn number" data-value="9">9</button>
+            <button class="btn operator" data-value="/">/</button>
+
+            <button class="btn number" data-value="4">4</button>
+            <button class="btn number" data-value="5">5</button>
+            <button class="btn number" data-value="6">6</button>
+            <button class="btn operator" data-value="*">*</button>
+
+            <button class="btn number" data-value="1">1</button>
+            <button class="btn number" data-value="2">2</button>
+            <button class="btn number" data-value="3">3</button>
+            <button class="btn operator" data-value="-">-</button>
+
+            <button class="btn span-two number" data-value="0">0</button>
+            <button class="btn number" data-value=".">.</button>
+            <button class="btn equal" data-value="=">=</button>
+            <button class="btn operator" data-value="+">+</button>
+        </div>
+    </div>
+
+    <script>
+        // Calculator script
+        const display = document.getElementById("display");
+        let currentValue = ""; 
+        let previousValue = ""; 
+        let operator = null; 
+
+        // Add event listeners to all buttons
+        document.querySelectorAll(".btn").forEach(button => {
+            button.addEventListener("click", () => {
+                const value = button.getAttribute("data-value");
+
+                // Add "pressed" reaction
+                button.classList.add("ring-2", "ring-blue-300");
+                setTimeout(() => button.classList.remove("ring-2", "ring-blue-300"), 150);
+
+                // Handle Clear (C) button
+                if (value === "C") {
+                    currentValue = "";
+                    previousValue = "";
+                    operator = null;
+                    updateDisplay("0");
+                    return;
+                }
+
+                // Handle "=" button
+                if (value === "=") {
+                    if (previousValue && currentValue && operator) {
+                        const result = calculate(previousValue, currentValue, operator);
+                        updateDisplay(result);
+                        currentValue = result.toString(); // Use result for next operation
+                        previousValue = "";
+                        operator = null;
+                    }
+                    return;
+                }
+
+                // Handle operator buttons
+                if (button.classList.contains("operator")) {
+                    if (currentValue) {
+                        if (previousValue) {
+                            previousValue = calculate(previousValue, currentValue, operator).toString();
+                            updateDisplay(previousValue);
+                        } else {
+                            previousValue = currentValue;
+                        }
+                        currentValue = "";
+                        operator = value;
+                    }
+                    return;
+                }
+
+                // Handle digit buttons
+                currentValue += value;
+                updateDisplay(currentValue);
+            });
+        });
+
+        // Update the display
+        function updateDisplay(value) {
+            display.textContent = value;
+
+            // Add a reaction for display updates
+            display.classList.add("ring-2", "ring-green-300");
+            setTimeout(() => display.classList.remove("ring-2", "ring-green-300"), 200);
+        }
+
+        // Perform calculations
+        function calculate(a, b, operator) {
+            const num1 = parseFloat(a);
+            const num2 = parseFloat(b);
+
+            if (isNaN(num1) || isNaN(num2)) return "Error";
+
+            switch (operator) {
+                case "+":
+                    return num1 + num2;
+                case "-":
+                    return num1 - num2;
+                case "*":
+                    return num1 * num2;
+                case "/":
+                    return num2 === 0 ? "Error" : num1 / num2;
+                default:
+                    return "Error";
+            }
+        }
+    </script>
+</body>
+</html>

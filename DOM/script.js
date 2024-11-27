@@ -18,3 +18,4 @@ function evaluateQuiz() {
 
   alert(`You scored ${score}/${Object.keys(correctAnswers).length}!`);
 }
+
