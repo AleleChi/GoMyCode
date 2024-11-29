@@ -151,18 +151,30 @@ header .btn-background:hover {
      object-fit: contain;
 }
 
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 .logo-carosel {
   background-color: #ffffff;
   width: 100%;
   z-index: 2;
   position: relative;
   padding: 20px 0;
+  overflow: hidden;
+}
+.logo-carosel .logo-list {
+  display: flex;
 }
 .logo-carosel ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -175,6 +187,16 @@ header .btn-background:hover {
   justify-content: center;
   align-items: center;
   padding: 10px;
+  animation: 5s slide infinite linear;
+}
+.logo-carosel::before {
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+.logo-carosel::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+.logo-carosel li:hover {
+  animation-play-state: paused;
 }
 .logo-carosel ul li img {
   width: 100%;
@@ -670,4 +692,7 @@ header .btn-background:hover {
 }
 .footer-section .footer-bottom a {
   color: #99a2a5;
+}
+.footer-section .footer-terms {
+  margin: 0 20px;
 }/*# sourceMappingURL=main.css.map */

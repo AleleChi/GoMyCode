@@ -290,6 +290,13 @@
           button.classList.add("active");
         });
       });
+
+      //logo slider clone copy
+      const logoSlider = document.querySelector(".logo-list");
+      const logoSliderClone = logoSlider.cloneNode(true)
+      logoSlider.parentNode.replaceChild(logoSliderClone, logoSlider);
+   
+
     </script>
   </body>
 </html>
