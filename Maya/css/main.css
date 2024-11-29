@@ -317,6 +317,7 @@ header .btn-background:hover {
   margin-top: 40px;
   display: inline-block;
   border-radius: 57px;
+  width: 210px;
 }
 .team-section h1 {
   padding: 20px;
@@ -371,15 +372,11 @@ header .btn-background:hover {
 .pricing-card {
   text-align: center;
   padding: 50px 20px;
-  /* Styling for the container */
-  /* Common button styles */
-  /* Active button styles */
-  /* Inactive button styles */
 }
 .pricing-card .pricing-tx {
   background-color: #fa4a00;
   color: #fff;
-  width: 120px;
+  width: 160px;
   padding: 20px;
   margin: 0 auto;
   margin-top: 40px;
@@ -412,11 +409,11 @@ header .btn-background:hover {
 .pricing-card .toggle-btn {
   padding: 20px;
   border: none;
-  border-radius: 57px; /* Matches the container radius */
+  border-radius: 57px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-  flex: 1; /* Makes both buttons equal width */
+  flex: 1;
   text-align: center;
 }
 .pricing-card .toggle-btn.active {
@@ -716,7 +713,8 @@ header .btn-background:hover {
     margin-bottom: 20px;
     white-space: normal;
   }
-  .hero-section .left-section .register, .hero-section .left-section .watch {
+  .hero-section .left-section .register,
+  .hero-section .left-section .watch {
     width: 100%;
     margin: 10px 0;
     padding: 14px;
@@ -796,99 +794,315 @@ header .btn-background:hover {
     margin-right: 20px;
   }
 }
+/* Media Query for Mobile View */
 @media screen and (max-width: 765px) {
   .about-us {
     padding: 20px 10px;
     text-align: center;
   }
   .maya-tx {
-    background-color: #fa4a00;
-    color: #fff;
     width: 50px;
     padding: 12px;
-    margin: 0 auto;
     margin-top: 20px;
-    display: inline-block;
-    border-radius: 57px;
   }
   h1 {
-    padding: 10px 0;
-    color: #003459;
     font-size: 28px;
-    font-weight: 800;
-    margin-bottom: 10px;
   }
   p {
-    color: #242b33;
-    line-height: 1.5;
-    margin-bottom: 20px;
     font-size: 14px;
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
   }
-  .card {
+  /* Make Cards Stack Vertically */
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure full width */
+    /* Update Card Size and Layout for Mobile */
+  }
+  .main-container .card {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 100%;
+    width: 90%;
     align-items: center;
     justify-content: center;
   }
-  /* First card */
-  .first-card,
-  .second-card,
-  .third-card {
+  .main-container .first-card,
+  .main-container .second-card,
+  .main-container .third-card {
+    width: 100%;
+    height: 250px;
+    padding: 15px;
     border-radius: 25px;
+    text-align: center;
     background-size: cover;
     background-position: center;
-    overflow: hidden;
-    padding: 15px;
-    color: #fff;
-    width: 90%;
-    margin: 0 auto;
   }
-  .first-card h2, .first-card p,
-  .second-card h2,
-  .second-card p,
-  .third-card h2,
-  .third-card p {
-    color: #fff;
-    margin: 10px;
+  /* Ensure proper spacing for header and button */
+  h2 {
     font-size: 18px;
   }
-  .first-card button,
-  .second-card button,
-  .third-card button {
-    display: block;
-    background-color: #fff;
-    color: #00233c;
-    font-weight: 900;
-    border: none;
-    border-radius: 57px;
-    padding: 12px 24px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 10px 0;
+  button {
     width: 100%;
+    padding: 12px 24px;
+    border-radius: 57px;
   }
-  .first-card button:hover,
-  .second-card button:hover,
-  .third-card button:hover {
-    background-color: #00233c;
+}
+@media screen and (max-width: 765px) {
+  .team-section {
+    padding: 20px 10px;
+    text-align: center;
+  }
+  .team-tx {
+    width: 60px;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  h1 {
+    font-size: 28px;
+    padding: 10px;
+  }
+  p {
+    font-size: 14px;
+    margin: 0 auto;
+    max-width: 500px;
+    color: #242b33;
+    line-height: 1.5;
+    white-space: normal;
+  }
+  .main-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+  }
+  .card-ceo,
+  .card-cvo,
+  .card-cd {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: rgba(2, 80, 137, 0.1019607843);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  img {
+    width: 100%;
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  h2 {
+    font-size: 18px;
+    color: #003459;
+    font-weight: 600;
+  }
+  p {
+    font-size: 14px;
+    color: #003459;
+    font-weight: 200;
+  }
+}
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  .pricing-tx {
+    width: 120px;
+    font-size: 14px;
+    padding: 15px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  .pricing-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pricing-card {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    text-align: center;
+    transform: none;
+    z-index: 2;
+  }
+  .toggle-btn {
+    padding: 15px;
+    font-size: 14px;
+  }
+  .badge {
+    width: 100px;
+    font-size: 0.75rem;
+    padding: 8px 8px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  ul li {
+    font-size: 0.8rem;
+  }
+  button {
+    padding: 8px 16px;
+  }
+  .two-btn {
+    width: 50%;
+  }
+  .two-btn {
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+  .toggle-btn {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .professional {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+  .professional .pro-sec-1 {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .professional h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  .professional p {
     color: #fff;
+    font-size: 1rem;
+    margin-bottom: 20px;
   }
-  /* Card backgrounds and heights */
-  .first-card {
-    background-image: url(../res/man-with-dog-ABout.png);
-    height: 250px;
+  .professional .cta {
+    padding: 12px 25px;
+    font-size: 0.9rem;
   }
-  .second-card {
-    background-image: url(../res/girl-dog-smiling.png);
-    height: 250px;
+  .professional .dog-im {
+    display: none;
   }
-  .third-card {
-    background-image: url(../res/girl-feeding-dog-plate.png);
-    height: 250px;
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  .cta {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 30px 20px;
+  }
+  .footer-section .subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .footer-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  .footer-section .subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+  }
+  .footer-section .subscribe-form .email-form {
+    border: 1px solid #99a2a5;
+    padding: 12px 15px;
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .footer-section .subscribe-form button {
+    background-color: #f9f9f9;
+    color: #00233c;
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 100%;
+    height: 48px;
+    font-weight: 800;
+  }
+  .footer-section .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+  }
+  .footer-section .footer-icons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+  .footer-section .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+}
+@media (max-width: 768px) and (max-width: 480px) {
+  .footer-section {
+    padding: 20px 15px;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+  .subscribe-form {
+    width: 90%;
+  }
+  .email-form {
+    width: 100%;
+    max-width: 400px;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .footer-icons {
+    gap: 12px;
+  }
+  .footer-bottom {
+    padding: 15px;
+  }
+  .footer-terms {
+    margin: 0 10px;
   }
 }/*# sourceMappingURL=main.css.map */
