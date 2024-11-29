@@ -218,7 +218,7 @@ header .btn-background:hover {
 .about-us .maya-tx {
   background-color: #fa4a00;
   color: #fff;
-  width: 50px;
+  width: 100px;
   padding: 20px;
   margin: 0 auto;
   margin-top: 40px;
@@ -250,6 +250,9 @@ header .btn-background:hover {
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .about-us .card .first-card h2,
 .about-us .card .first-card p,
@@ -258,19 +261,12 @@ header .btn-background:hover {
 .about-us .card .third-card h2,
 .about-us .card .third-card p {
   display: flex;
-  justify-content: flex-start;
-  position: relative;
-  z-index: 1;
   color: #fff;
-  margin: 20px 50px 20px 20px;
+  margin: 10px 20px;
 }
 .about-us .card .first-card button,
 .about-us .card .second-card button,
 .about-us .card .third-card button {
-  display: flex;
-  justify-content: flex-start;
-  position: relative;
-  z-index: 1;
   background-color: #fff;
   color: #00233c;
   font-weight: 900;
@@ -280,6 +276,8 @@ header .btn-background:hover {
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin: 20px;
+  width: 210px;
+  margin-top: auto;
 }
 .about-us .card .first-card button:hover,
 .about-us .card .second-card button:hover,
@@ -290,18 +288,20 @@ header .btn-background:hover {
 .about-us .card .first-card {
   background-image: url(../res/man-with-dog-ABout.png);
   grid-column: 1;
+  height: 700px;
   width: 100%;
-  height: 100vh;
 }
 .about-us .card .second-card {
   background-image: url(../res/girl-dog-smiling.png);
   grid-column: 2;
-  height: 50vh;
+  height: 370px;
 }
 .about-us .card .third-card {
   background-image: url(../res/girl-feeding-dog-plate.png);
   grid-column: 2;
-  height: 50vh;
+  height: 300px;
+  position: relative;
+  top: -320px;
 }
 
 .team-section {
@@ -695,4 +695,200 @@ header .btn-background:hover {
 }
 .footer-section .footer-terms {
   margin: 0 20px;
+}
+
+@media screen and (max-width: 765px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .hero-section .left-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .hero-section .left-section h1 {
+    font-size: 50px;
+  }
+  .hero-section .left-section p {
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 20px;
+    white-space: normal;
+  }
+  .hero-section .left-section .register, .hero-section .left-section .watch {
+    width: 100%;
+    margin: 10px 0;
+    padding: 14px;
+    font-size: 14px;
+  }
+  .hero-section .left-section .watch {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #003459;
+    font-weight: bolder;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    padding: 12px 40px;
+    text-align: center;
+    border-radius: 57px;
+    border: 1px solid #003459;
+    border-color: #003459;
+  }
+  .hero-section .left-section .watch:hover {
+    background-color: #003459;
+    color: #ebebeb;
+  }
+  .hero-section .right-section {
+    width: 100%;
+    padding: 20px 0;
+    display: block;
+    margin-top: 20px;
+  }
+  .hero-section .right-section img {
+    width: 100%;
+    position: relative;
+    top: 120px;
+    display: none;
+  }
+}
+@media screen and (max-width: 765px) {
+  .logo-carosel {
+    padding: 10px 0;
+  }
+  .logo-carosel .logo-list {
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .logo-carosel ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .logo-carosel li {
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    animation: 5s slide infinite linear;
+  }
+  .logo-carosel ul li img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .logo-carosel ul li:first-child {
+    margin-left: 20px;
+  }
+  .logo-carosel ul li:last-child {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 765px) {
+  .about-us {
+    padding: 20px 10px;
+    text-align: center;
+  }
+  .maya-tx {
+    background-color: #fa4a00;
+    color: #fff;
+    width: 50px;
+    padding: 12px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 57px;
+  }
+  h1 {
+    padding: 10px 0;
+    color: #003459;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  p {
+    color: #242b33;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: 14px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  /* First card */
+  .first-card,
+  .second-card,
+  .third-card {
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding: 15px;
+    color: #fff;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .first-card h2, .first-card p,
+  .second-card h2,
+  .second-card p,
+  .third-card h2,
+  .third-card p {
+    color: #fff;
+    margin: 10px;
+    font-size: 18px;
+  }
+  .first-card button,
+  .second-card button,
+  .third-card button {
+    display: block;
+    background-color: #fff;
+    color: #00233c;
+    font-weight: 900;
+    border: none;
+    border-radius: 57px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px 0;
+    width: 100%;
+  }
+  .first-card button:hover,
+  .second-card button:hover,
+  .third-card button:hover {
+    background-color: #00233c;
+    color: #fff;
+  }
+  /* Card backgrounds and heights */
+  .first-card {
+    background-image: url(../res/man-with-dog-ABout.png);
+    height: 250px;
+  }
+  .second-card {
+    background-image: url(../res/girl-dog-smiling.png);
+    height: 250px;
+  }
+  .third-card {
+    background-image: url(../res/girl-feeding-dog-plate.png);
+    height: 250px;
+  }
 }/*# sourceMappingURL=main.css.map */

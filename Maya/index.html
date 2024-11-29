@@ -10,38 +10,76 @@
     />
 
     <link rel="stylesheet" href="./css/main.css" />
+   
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header>
-      <div class="logo-left">
-        <div>
-          <img src="./res/logo.png" alt="" />
+    <header class="flex flex-wrap items-center justify-between px-4 py-3  md:px-8">
+        <!-- Logo Section -->
+        <div class="flex items-center space-x-2">
+          <img src="./res/logo.png" alt="Logo" class="h-8 w-8 md:h-10 md:w-10" />
+          <div class="maya">
+            <h1 class="text-xl font-semibold logo-text md:text-2xl">
+              Maya <span class="text-[#003459]-500 logo-text-in">Insurance</span>
+            </h1>
+          </div>
         </div>
-        <div class="maya">
-          <h1 class="logo-text">
-            Maya <span class="logo-text-in">Insurance</span>
-          </h1>
+      
+        <!-- Menu Section -->
+        <nav class="hidden md:block">
+          <ul class="flex space-x-6 text-gray-700 menu-list cursor-pointer">
+            <li class="text-[#FA4A00] font-bold">Home</li>
+            <li>About</li>
+            <li>Pricing</li>
+            <li>Contact</li>
+            <li>FAQs</li>
+          </ul>
+        </nav>
+      
+        <!-- Buttons -->
+        <div class="hidden space-x-4 md:flex">
+          <button class="px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded hover:bg-gray-100 btn-border">
+            Login
+          </button>
+          <button class="px-4 py-2 text-sm font-medium text-white bg-[#FA4A00] rounded hover:bg-[#e03d00] btn-background">
+            Sign up
+          </button>
         </div>
-      </div>
-      <div class="menu">
-        <ul class="menu-list">
-          <li class="active">Home</li>
-          <li>About</li>
-          <li>Pricing</li>
-          <li>Contact</li>
-          <li>FAQs</li>
-        </ul>
-      </div>
-      <div>
-        <button class="btn-border">Login</button>
-        <button class="btn-background">Sign up</button>
-      </div>
-    </header>
-
+      
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button class="text-gray-700 focus:outline-none" id="menu-toggle">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+      
+        <!-- Mobile Menu -->
+        <div class="hidden w-full mt-3 md:hidden" id="mobile-menu">
+          <ul class="space-y-2 text-gray-700 menu-list">
+            <li class="block text-[#FA4A00] font-bold">Home</li>
+            <li>About</li>
+            <li>Pricing</li>
+            <li>Contact</li>
+            <li>FAQs</li>
+            <li>
+              <button class="w-full px-4 py-2 text-left text-sm font-medium text-gray-700 border border-gray-300 rounded hover:bg-gray-100 btn-border">
+                Login
+              </button>
+            </li>
+            <li>
+              <button class="w-full px-4 py-2 text-left text-sm font-medium text-white bg-[#FA4A00] rounded hover:bg-[#e03d00] btn-background">
+                Sign up
+              </button>
+            </li>
+          </ul>
+        </div>
+      </header>
     <!-- main section -->
     <section class="hero-section">
       <div class="left-section">
@@ -295,8 +333,12 @@
       const logoSlider = document.querySelector(".logo-list");
       const logoSliderClone = logoSlider.cloneNode(true)
       logoSlider.parentNode.replaceChild(logoSliderClone, logoSlider);
-   
 
+    //mobile menu
+      document.getElementById("menu-toggle").addEventListener("click", () => {
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenu.classList.toggle("hidden");
+      });
     </script>
   </body>
 </html>
