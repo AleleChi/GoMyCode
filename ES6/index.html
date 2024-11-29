@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+     let marks = prompt("enter your marks")
+     let result = (marks >= 40) ? 'passed': 'failed'
+    alert(`You ${result} the exam`);
+
+    let sayHello = () => alert('My name is Alele Chi')
+    sayHello()
+
+    const people = [{name:'Max'}, {name:'Jack'}, {name:'Mary'}]
+    function findPerson(name){
+        for (let i = 0; i < people.length; i++){
+            let person = people[i]
+            if (person.name ==name){
+                return person
+            }
+        }
+    }
+
+    //es6
+    const people1 = [{name:'Max'}, {name:'Jack'}, {name:'Mary'}]
+      function findPerson1(name){
+        return people1.find(person => person.name == name)
+        const showEachOne = name => people1.forEach(person => alert(person.name))
+        
+      }
+
+    </script>
+</body>
+</html>
