@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const cartItems = document.querySelectorAll('.card'); // All product cards
-    const totalPriceElement = document.querySelector('.total'); // Total price display
+    const cartItems = document.querySelectorAll('.card'); 
+    const totalPriceElement = document.querySelector('.total'); display
   
     // Update the total price
     function updateTotalPrice() {

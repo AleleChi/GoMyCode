@@ -1,0 +1,219 @@
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "SF Pro Display", sans-serif;
+  background-color: #010101;
+}
+
+:root {
+  --hero-bg-color: #010101;
+  --hero-text-color: #ffbd1a;
+  --gray-color: #cacaca;
+  --gray2-color: #828282;
+  --light-black-color: #171717;
+  --white-text-color: #ffffff;
+  --light-gray-color: #2f2f2f;
+  --number-card-color: #828282;
+}
+
+header {
+  width: 1193px;
+  margin: 34.69px 157px 0 161px;
+  display: flex;
+  justify-content: space-between;
+}
+header .logo-area {
+  cursor: pointer;
+  display: flex;
+}
+header .logo-area img {
+  width: 35px;
+  height: 37px;
+}
+header .logo-area h1 {
+  font-size: 24px;
+  color: var(--white-text-color);
+}
+header nav ul {
+  width: 341px;
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  color: var(--gray2-color);
+  height: 24px;
+  cursor: pointer;
+}
+header button {
+  color: var(--gray2-color);
+  width: 169px;
+  font-size: 20px;
+  font-weight: 500;
+  height: 54px;
+  border-radius: 50px;
+  background-color: #171717;
+  border: none;
+  cursor: pointer;
+}
+header button:hover {
+  background-color: #2f2f2f;
+}
+
+.hero-section {
+  background-color: #010101;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 160px;
+}
+.hero-section .left-h1 {
+  flex: 1;
+}
+.hero-section .left-h1 h1 {
+  font-size: 74px;
+  font-weight: 600;
+  line-height: 112px;
+  color: var(--white-text-color);
+}
+.hero-section .left-h1 h1 span {
+  color: #ffbd1a;
+}
+.hero-section .right-h {
+  flex: 1;
+  text-align: right;
+}
+.hero-section .right-h p {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #828282;
+  margin-bottom: 20px;
+}
+.hero-section .right-h .btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+.hero-section .right-h .btn button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--hero-bg-color);
+  background-color: #ffbd1a;
+  border: none;
+  border-radius: 80px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hero-section .right-h .btn button:hover {
+  background-color: #e5a500;
+}
+.hero-section .right-h .btn img {
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+}
+
+.hero-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.center-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+img {
+  cursor: pointer;
+  position: relative;
+  height: auto;
+  background-color: transparent;
+  transition: transform 0.3s ease;
+  mask-image: radial-gradient(circle, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 100%);
+  -webkit-mask-image: radial-gradient(circle, rgb(0, 0, 0) 100%, rgb(0, 0, 0) 100%);
+}
+
+.left-img {
+  transform: rotate(-1deg);
+  z-index: 1;
+  width: 494px;
+  left: 190px;
+}
+
+.centerIm {
+  transform: rotate(0.337deg);
+  z-index: 2;
+  width: 294px;
+}
+
+.right-img {
+  transform: rotate(0deg);
+  z-index: 2;
+  width: 494px;
+  left: -280px;
+  bottom: -40px;
+  background-color: transparent;
+}
+
+.profile {
+  margin: 34.69px 157px 0 161px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  right: 0;
+  top: -60px;
+}
+.profile img {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.profile .lft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  top: 20px;
+  text-align: center;
+}
+.profile .lft h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--white-text-color);
+  margin-bottom: 10px;
+}
+.profile .lft .circle-p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.profile .lft .circle-p .circle {
+  width: 10px;
+  height: 10px;
+  background-color: #ffbd1a;
+  border-radius: 50%;
+}
+.profile .lft .circle-p p {
+  font-size: 14px;
+  color: #828282;
+}
+
+.features {
+  display: flex;
+}
+.features h1 {
+  font-size: 90px;
+  color: #cacaca;
+}/*# sourceMappingURL=main.css.map */
